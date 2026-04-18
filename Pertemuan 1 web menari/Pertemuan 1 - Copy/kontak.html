@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | Pesona Menari Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <span class="site-title">Pesona Menari Indonesia</span>
+      <nav id="desktop-nav">
+        <a href="index.html">Beranda</a>
+        <a href="acara.html">Undangan Acara</a>
+        <a href="tari.html">Tari Nusantara</a>
+        <a href="pelatihan.html">Pelatihan</a>
+        <a href="pricelist.html">Pricelist</a>
+        <a href="kontak.html" class="active">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Beranda</a>
+    <a href="acara.html">Undangan Acara</a>
+    <a href="tari.html">Tari Nusantara</a>
+    <a href="pelatihan.html">Pelatihan</a>
+    <a href="pricelist.html">Pricelist</a>
+    <a href="kontak.html" class="active">Kontak</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Hubungi Kami</h1>
+      <p>Untuk informasi lebih lanjut mengenai pelatihan, kegiatan seni, atau kerja sama, silakan hubungi kami melalui media berikut.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT BOX ===== -->
+  <section class="content-section">
+    <div class="container">
+      <div class="contact-box fade-in-up">
+        <h2>Kontak Pribadi</h2>
+        <p>Kami terbuka untuk pertanyaan, diskusi, maupun kerja sama yang berkaitan dengan seni tari budaya Indonesia. Silakan menghubungi melalui WhatsApp atau Instagram di bawah ini.</p>
+        <div class="contact-links">
+          <a href="https://wa.me/6287789356850" target="_blank" class="btn">💬 WhatsApp</a>
+          <a href="https://instagram.com/zanetasy._06" target="_blank" class="btn">📸 Instagram</a>
+        </div>
+        <p class="note">*Pesan akan dibalas pada jam operasional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Pesona Menari Indonesia</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('nav-drawer');
+    toggle.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>

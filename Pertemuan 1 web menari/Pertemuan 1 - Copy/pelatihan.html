@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran | Pesona Menari Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <span class="site-title">Pesona Menari Indonesia</span>
+      <nav id="desktop-nav">
+        <a href="index.html">Beranda</a>
+        <a href="acara.html">Undangan Acara</a>
+        <a href="tari.html">Tari Nusantara</a>
+        <a href="pelatihan.html" class="active">Pelatihan</a>
+        <a href="pricelist.html">Pricelist</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Beranda</a>
+    <a href="acara.html">Undangan Acara</a>
+    <a href="tari.html">Tari Nusantara</a>
+    <a href="pelatihan.html" class="active">Pelatihan</a>
+    <a href="pricelist.html">Pricelist</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Pendaftaran Pelatihan Tari</h1>
+      <p>Bergabunglah bersama kami untuk mempelajari dan melestarikan seni tari budaya Indonesia melalui program pelatihan yang terstruktur dan berkelanjutan.</p>
+    </div>
+  </section>
+
+  <!-- ===== INFO PENDAFTARAN ===== -->
+  <section class="content-section fade-in-up">
+    <div class="container">
+      <h2>Informasi Pendaftaran</h2>
+      <p style=" max-width:820px; margin:32px auto 0; text-align: justify;">Halaman pendaftaran ini disediakan bagi calon peserta yang ingin mengikuti program pelatihan tari di <strong>Pesona Menari Indonesia</strong>. Program pelatihan terbuka untuk berbagai kalangan, baik pemula maupun yang telah memiliki pengalaman menari.</p>
+      <p style=" max-width:820px; margin:32px auto 0; text-align: justify;">Dengan mengikuti pelatihan ini, peserta akan mendapatkan pembelajaran mengenai teknik dasar dan lanjutan tari tradisional, pemahaman makna budaya, serta kesempatan tampil dalam kegiatan seni dan acara budaya.</p>
+      <p style=" max-width:820px; margin:32px auto 0; text-align: justify;">Untuk memudahkan proses administrasi, pendaftaran dilakukan secara online melalui formulir Google Form. Silakan klik tombol di bawah ini untuk mengisi formulir pendaftaran secara lengkap dan benar.</p>
+
+      <div style="text-align:center; margin-top:44px;">
+        <a href="https://forms.gle/7NCVAwKtCJCuWu4ZA" target="_blank" class="btn">📋 Klik di sini untuk Pendaftaran</a>
+      </div>
+      <p class="note">*Pastikan data yang diisi sesuai dengan identitas asli.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Pesona Menari Indonesia</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('nav-drawer');
+    toggle.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>

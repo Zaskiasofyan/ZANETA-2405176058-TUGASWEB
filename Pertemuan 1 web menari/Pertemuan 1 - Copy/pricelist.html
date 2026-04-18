@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricelist | Pesona Menari Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container">
+      <span class="site-title">Pesona Menari Indonesia</span>
+      <nav id="desktop-nav">
+        <a href="index.html">Beranda</a>
+        <a href="acara.html">Undangan Acara</a>
+        <a href="tari.html">Tari Nusantara</a>
+        <a href="pelatihan.html">Pelatihan</a>
+        <a href="pricelist.html" class="active">Pricelist</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Beranda</a>
+    <a href="acara.html">Undangan Acara</a>
+    <a href="tari.html">Tari Nusantara</a>
+    <a href="pelatihan.html">Pelatihan</a>
+    <a href="pricelist.html" class="active">Pricelist</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>💰 Price List Sanggar Tari</h1>
+      <p>Berikut adalah daftar harga program latihan tari yang tersedia per bulan.</p>
+    </div>
+  </section>
+
+  <!-- ===== PRICING CARDS ===== -->
+  <section class="content-section">
+    <div class="container">
+      <div class="training-grid">
+
+        <div class="training-card fade-in-up">
+          <h3>Paket Dasar</h3>
+          <div class="price">Rp150.000</div>
+          <p style="font-size:0.82rem; color:#a07850; margin-bottom:4px;">/ bulan</p>
+          <ul>
+            <li>1 Bulan</li>
+            <li>2x per minggu</li>
+            <li>60 menit / pertemuan</li>
+            <li>Gerakan dasar tari</li>
+            <li>Pengenalan musik</li>
+            <li>Evaluasi dasar</li>
+          </ul>
+        </div>
+
+        <div class="training-card fade-in-up">
+          <h3>Paket Menengah</h3>
+          <div class="price">Rp250.000</div>
+          <p style="font-size:0.82rem; color:#a07850; margin-bottom:4px;">/ bulan</p>
+          <ul>
+            <li>1 Bulan</li>
+            <li>3x per minggu</li>
+            <li>90 menit / pertemuan</li>
+            <li>Pengembangan teknik</li>
+            <li>Latihan ekspresi</li>
+            <li>Koreksi gerakan</li>
+          </ul>
+        </div>
+
+        <div class="training-card fade-in-up">
+          <h3>Paket Lanjutan</h3>
+          <div class="price">Rp400.000</div>
+          <p style="font-size:0.82rem; color:#a07850; margin-bottom:4px;">/ bulan</p>
+          <ul>
+            <li>1 Bulan</li>
+            <li>4x per minggu</li>
+            <li>120 menit / pertemuan</li>
+            <li>Latihan panggung</li>
+            <li>Simulasi pertunjukan</li>
+            <li>Evaluasi intensif</li>
+          </ul>
+        </div>
+
+        <div class="training-card fade-in-up">
+          <h3>Kelas Privat</h3>
+          <div class="price">Rp75.000</div>
+          <p style="font-size:0.82rem; color:#a07850; margin-bottom:4px;">/ sesi</p>
+          <ul>
+            <li>Jadwal fleksibel</li>
+            <li>1 sesi</li>
+            <li>Pendampingan personal</li>
+            <li>Materi sesuai kebutuhan</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="note">*Harga dapat berubah sewaktu-waktu sesuai kebijakan sanggar.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Pesona Menari Indonesia</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('nav-drawer');
+    toggle.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    drawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>
